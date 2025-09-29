@@ -1,0 +1,14 @@
+/* 恢复联系信息图标原始颜色 */
+.contact-info-list i {
+    color: var(--accent-blue) !important;
+    font-size: 1rem;
+    margin-right: 12px;
+    margin-top: 3px;
+}
+
+.footer-contact p i {
+    color: var(--accent-blue) !important;
+    margin-right: 10px;
+    margin-top: 4px;
+    min-width: 20px;
+}

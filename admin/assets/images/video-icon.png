@@ -1,0 +1,46 @@
+<?php
+// Create a simple video icon programmatically
+if (!extension_loaded('gd')) {
+    die('GD extension is not available');
+}
+
+// Create image
+$width = 100;
+$height = 100;
+$image = imagecreatetruecolor($width, $height);
+
+// Colors
+$bgColor = imagecolorallocate($image, 50, 50, 50);  // Dark gray
+$iconColor = imagecolorallocate($image, 255, 255, 255);  // White
+
+// Fill background
+imagefill($image, 0, 0, $bgColor);
+
+// Draw play button triangle
+$centerX = $width / 2;
+$centerY = $height / 2;
+$size = 30;
+
+$points = [
+    $centerX - $size/2, $centerY - $size/2,  // top left
+    $centerX + $size/2, $centerY,            // right middle
+    $centerX - $size/2, $centerY + $size/2   // bottom left
+];
+imagefilledpolygon($image, $points, 3, $iconColor);
+
+// Add text
+$text = "VIDEO";
+$textColor = imagecolorallocate($image, 255, 255, 255);
+$font = 2; // Built-in font
+$textWidth = imagefontwidth($font) * strlen($text);
+$textX = ($width - $textWidth) / 2;
+$textY = $centerY + $size;
+imagestring($image, $font, $textX, $textY, $text, $textColor);
+
+// Output image
+header('Content-Type: image/png');
+imagepng($image);
+
+// Free memory
+imagedestroy($image);
+?>

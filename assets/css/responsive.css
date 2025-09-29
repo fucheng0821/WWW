@@ -1,0 +1,66 @@
+/* 响应式样式 */
+
+/* 平板设备 */
+@media screen and (max-width: 992px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    
+    .btn-primary, .btn-secondary {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* 移动设备 */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    
+    .btn-primary, .btn-secondary {
+        padding: 8px 16px;
+        font-size: 13px;
+        border-radius: 25px;
+    }
+    
+    /* 隐藏部分非关键元素 */
+    .hide-on-mobile {
+        display: none !important;
+    }
+}
+
+/* 小屏幕设备 */
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0 5px;
+    }
+    
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.25rem; }
+    h3 { font-size: 1.125rem; }
+    
+    .btn-primary, .btn-secondary {
+        padding: 6px 12px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+    
+    /* 调整表单布局 */
+    .footer-inquiry-form .form-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-inquiry-form .form-group > * {
+        width: 100%;
+    }
+}

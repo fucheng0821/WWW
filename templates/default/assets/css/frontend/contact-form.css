@@ -1,0 +1,147 @@
+/* Contact Form Specific Styles */
+
+/* 表单容器增强 */
+.contact-form-wrapper {
+    background: var(--bg-primary);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: var(--shadow-medium);
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* 表单组增强 */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--text-dark);
+    font-size: 1rem;
+}
+
+.form-group label .required {
+    color: var(--accent-pink);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid var(--border-medium);
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s var(--ease-smooth);
+    background: var(--bg-secondary);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(92, 219, 211, 0.2);
+    background: var(--bg-primary);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* 验证码容器增强 */
+.captcha-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.captcha-container input {
+    flex: 1;
+}
+
+.captcha-image {
+    height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid var(--border-medium);
+    transition: all 0.3s var(--ease-smooth);
+    width: 120px;
+    object-fit: cover;
+}
+
+.captcha-image:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-subtle);
+}
+
+/* 提交按钮增强 */
+.form-submit {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-primary.form-btn {
+    background: var(--gradient-accent);
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: var(--shadow-medium);
+    transition: all 0.4s var(--ease-smooth);
+}
+
+.btn-primary.form-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+}
+
+.btn-primary.form-btn:active {
+    transform: translateY(0);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .contact-form-wrapper {
+        padding: 30px 20px;
+    }
+    
+    .captcha-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .captcha-image {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-form-wrapper {
+        padding: 20px 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .captcha-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .captcha-image {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

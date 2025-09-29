@@ -1,0 +1,81 @@
+/* 卡片样式 */
+.card {
+    background: var(--bg-primary);
+    border-radius: 4px;
+    padding: 25px;
+    box-shadow: var(--shadow-subtle);
+    transition: all 0.3s var(--ease-smooth);
+    margin-bottom: 20px;
+    border: 1px solid var(--border-light);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* 管理后台卡片样式 */
+.admin-card {
+    background: var(--primary-white);
+    border-radius: 4px;
+    padding: 25px;
+    box-shadow: var(--shadow-subtle);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s var(--ease-smooth);
+    margin-bottom: 20px;
+    border: 1px solid var(--border-light);
+}
+
+.admin-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--brand-orange);
+}
+
+.admin-card-icon {
+    font-size: 42px;
+    margin-right: 25px;
+    width: 80px;
+    text-align: center;
+    line-height: 1;
+}
+
+.admin-card-content {
+    flex: 1;
+}
+
+.admin-card-number {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.admin-card-title {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* 颜色主题 */
+.admin-card-blue .admin-card-icon,
+.admin-card-blue .admin-card-number {
+    color: var(--brand-blue);
+}
+
+.admin-card-green .admin-card-icon,
+.admin-card-green .admin-card-number {
+    color: var(--brand-green);
+}
+
+.admin-card-orange .admin-card-icon,
+.admin-card-orange .admin-card-number {
+    color: var(--brand-orange);
+}
+
+.admin-card-red .admin-card-icon,
+.admin-card-red .admin-card-number {
+    color: #dc3545;
+}

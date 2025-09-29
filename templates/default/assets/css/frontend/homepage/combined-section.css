@@ -1,0 +1,476 @@
+/* 客户见证与立即询价组合板块样式 */
+.combined-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    position: relative;
+    overflow: visible; /* Changed from hidden to visible to prevent cutting off content */
+}
+
+.combined-wrapper {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: stretch;
+    flex-wrap: nowrap; /* Ensure no wrapping */
+}
+
+/* 左右列布局 */
+.testimonials-column {
+    flex: 1;
+    min-width: 300px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+}
+
+.inquiry-column {
+    flex: 1;
+    min-width: 300px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 标题样式 */
+.combined-section .section-header {
+    margin-bottom: 30px;
+    text-align: center;
+    flex: 0 0 auto; /* Prevent header from growing */
+}
+
+.combined-section .section-header h2 {
+    font-size: 2rem;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.combined-section .section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 3px;
+}
+
+.combined-section .section-header p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* 客户见证样式 - 全新重写 */
+.testimonials-wrapper {
+    position: relative;
+    height: 370px; /* Match the slider height, reduced by 30px */
+    overflow: hidden; /* Prevent content overflow */
+    box-sizing: border-box; /* Ensure proper sizing */
+}
+
+.testimonials-slider {
+    height: 370px; /* Reduced by 30px */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0; /* Remove margin as indicators are outside */
+}
+
+.testimonial-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease-in-out;
+}
+
+.testimonial-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    height: 370px; /* Reduced from 400px to 370px (30px less) */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent content overflow */
+    margin-top: -5px; /* Move the card up by 5px */
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 120px;
+    color: rgba(0, 123, 255, 0.1);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.testimonial-header {
+    margin-bottom: 20px; /* Reduced margin */
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.testimonial-author-avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    border: 4px solid #007bff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.testimonial-author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-author-info h4 {
+    margin: 0 0 6px 0;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.testimonial-author-info span {
+    color: #666;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.testimonial-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-height: 0; /* Allow flex item to shrink below content size */
+}
+
+.testimonial-content p {
+    line-height: 1.8;
+    color: #444;
+    font-size: 1.05rem;
+    margin: 0;
+    font-weight: 400;
+    overflow: hidden; /* Prevent text overflow */
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+    display: -webkit-box; /* For webkit browsers */
+    -webkit-line-clamp: 4; /* Limit to 4 lines */
+    -webkit-box-orient: vertical; /* Vertical orientation */
+    line-clamp: 4; /* Standard property for compatibility */
+}
+
+/* 轮播导航样式 */
+/*
+.testimonials-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 10;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    color: #007bff;
+    font-size: 1.3rem;
+}
+
+.nav-btn:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 123, 255, 0.3);
+    color: #0056b3;
+}
+*/
+
+/* 指示器样式 */
+.testimonials-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 24px 0 0 0; /* Changed to margin-top only */
+    height: 24px; /* Explicit height to prevent layout issues */
+    line-height: 24px; /* Ensure proper vertical alignment */
+    flex: 0 0 auto; /* Prevent indicators from growing */
+}
+
+.indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.indicator.active {
+    background: #007bff;
+    width: 40px;
+    border-radius: 7px;
+}
+
+/* 询价卡片样式 - 全新重写 */
+.inquiry-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    height: 370px; /* Reduced from 400px to 370px (30px less) */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent content overflow */
+    margin-top: 30px; /* Move the card down by 30px */
+}
+
+#main-inquiry-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box; /* Ensure proper sizing */
+}
+
+/* 表单布局保持不变但样式重写 */
+.form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+/* 表单元素样式重写 */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    background-color: #f8fafc;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15);
+    background-color: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 85px;
+    line-height: 1.5;
+    font-family: inherit;
+}
+
+/* 第三行布局保持不变 */
+.third-row {
+    align-items: flex-start;
+    min-height: 120px; /* Ensure minimum height for captcha and button */
+}
+
+.left-column {
+    flex: 1;
+}
+
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 120px; /* Ensure minimum height */
+}
+
+/* 验证码样式重写 */
+.captcha-group {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.captcha-group input {
+    width: 55%;
+    display: inline-block;
+    height: 44px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.captcha-image {
+    height: 44px;
+    width: auto;
+    cursor: pointer;
+    display: inline-block;
+    flex-shrink: 0;
+    margin: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.captcha-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 提交按钮样式重写 */
+.btn-primary {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 48px;
+    box-shadow: 0 4px 16px rgba(0, 123, 255, 0.2);
+    box-sizing: border-box;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+    background: linear-gradient(90deg, #0056b3, #004085);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* 响应式设计 - 优化布局 */
+@media (max-width: 992px) {
+    .combined-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .testimonial-card,
+    .inquiry-card {
+        height: auto;
+        min-height: 370px; /* Reduced by 30px */
+    }
+}
+
+@media (max-width: 768px) {
+    .combined-section {
+        padding: 60px 0;
+    }
+    
+    .combined-section .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .third-row {
+        flex-direction: column;
+    }
+    
+    .captcha-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+    
+    .captcha-group input {
+        width: 100%;
+    }
+    
+    .captcha-image {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .combined-section {
+        padding: 40px 0;
+    }
+    
+    .combined-section .section-header {
+        margin-bottom: 24px;
+    }
+    
+    .combined-section .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .testimonial-card,
+    .inquiry-card {
+        padding: 24px;
+        min-height: 330px; /* Reduced by 30px */
+    }
+    
+    .testimonial-author-avatar {
+        width: 76px;
+        height: 76px;
+    }
+    
+    /* 注释掉导航按钮样式 */
+    /*
+    .nav-btn {
+        width: 44px;
+        height: 44px;
+    }
+    */
+}

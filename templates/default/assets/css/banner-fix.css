@@ -1,0 +1,75 @@
+/* Banner样式修复文件 */
+
+/* 确保首页Banner高度与原网站一致 */
+.hero-section {
+    height: 500px !important;
+    margin-top: 0 !important;
+}
+
+/* 确保占位Banner高度与原网站一致 */
+.hero-section.hero-placeholder.enhanced {
+    height: 500px !important;
+    min-height: 500px !important;
+}
+
+/* 修复Banner内容样式 */
+.hero-content-3d h1,
+.hero-placeholder-content.enhanced h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: white;
+    line-height: 1.2;
+    position: relative;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.hero-content-3d h1::after,
+.hero-placeholder-content.enhanced h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.hero-content-3d p,
+.hero-placeholder-content.enhanced p {
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* 修复Banner按钮样式 */
+.hero-buttons .btn-primary,
+.hero-placeholder-buttons.enhanced .btn-primary {
+    background: white;
+    color: #5cdbd3;
+    padding: 14px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid white;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-buttons .btn-primary:hover,
+.hero-placeholder-buttons.enhanced .btn-primary:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}

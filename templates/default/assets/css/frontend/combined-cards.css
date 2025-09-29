@@ -1,0 +1,46 @@
+/* Combined cards layout for Testimonials (left) and Inquiry (right) - Only for homepage */
+.home-page .combined-section{
+  display:flex;
+  gap:24px;
+  align-items:stretch;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.home-page .combined-card{
+  background:#fff;
+  border:1px solid #e6e6e6;
+  border-radius:6px;
+  box-shadow:0 1px 4px rgba(0,0,0,0.04);
+  padding:16px;
+  box-sizing:border-box;
+  width:50%;
+  min-height:400px; /* ensure at least 400px */
+  max-height:600px;
+  overflow:auto;
+}
+.home-page .testimonials-card{ /* left card */ padding:0; }
+.home-page .inquiry-card{ /* right card */ padding:0; }
+
+/* Ensure internal form keeps its own layout but constrained to card */
+.home-page .inquiry-card .contact-form{ height:100%; display:flex; flex-direction:column; }
+.home-page .inquiry-card .contact-form .layui-row{ flex:1 1 auto; display:flex; gap:16px; }
+.home-page .inquiry-card .contact-form .layui-col-md6{ display:flex; flex-direction:column; }
+.home-page .inquiry-card .form-submit{ margin-top:8px; }
+
+/* Testimonials wrapper styling */
+.home-page .testimonials-wrapper{ height:100%; display:flex; align-items:flex-start; justify-content:center; padding-top:8px; }
+.home-page .testimonials-slider{ width:100%; }
+
+/* Responsive: stack on small screens */
+@media (max-width: 992px){
+  .home-page .combined-section{ flex-direction:column; }
+  .home-page .combined-card{ width:100%; min-height:unset; max-height:none; }
+  .home-page .inquiry-card .contact-form{ width:100%; }
+}
+
+/* Small adjustments to prevent overflow of captcha image */
+.home-page .captcha-container{ display:flex; align-items:center; gap:8px; }
+.home-page .captcha-image{ cursor:pointer; max-height:48px; }
+
+/* keep buttons standard */
+.home-page .combined-card .btn-primary{ display:inline-block; }

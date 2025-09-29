@@ -1,0 +1,320 @@
+/* 响应式工具类 - 统一媒体查询断点 */
+
+/* 断点定义 */
+:root {
+  /* 移动设备断点 */
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+}
+
+/* 响应式显示工具类 */
+.responsive-hidden {
+  display: none !important;
+}
+
+.responsive-visible {
+  display: block !important;
+}
+
+.responsive-inline {
+  display: inline !important;
+}
+
+.responsive-inline-block {
+  display: inline-block !important;
+}
+
+.responsive-flex {
+  display: flex !important;
+}
+
+.responsive-grid {
+  display: grid !important;
+}
+
+/* 超小屏幕 (xs) - 0px 及以上 */
+@media (max-width: 575.98px) {
+  .hidden-xs {
+    display: none !important;
+  }
+  
+  .visible-xs {
+    display: block !important;
+  }
+  
+  .text-center-xs {
+    text-align: center !important;
+  }
+  
+  .text-left-xs {
+    text-align: left !important;
+  }
+  
+  .text-right-xs {
+    text-align: right !important;
+  }
+  
+  .flex-column-xs {
+    flex-direction: column !important;
+  }
+  
+  .flex-row-xs {
+    flex-direction: row !important;
+  }
+  
+  .w-100-xs {
+    width: 100% !important;
+  }
+  
+  .w-auto-xs {
+    width: auto !important;
+  }
+  
+  .m-0-xs {
+    margin: 0 !important;
+  }
+  
+  .p-0-xs {
+    padding: 0 !important;
+  }
+}
+
+/* 小屏幕 (sm) - 576px 及以上 */
+@media (min-width: 576px) {
+  .hidden-sm {
+    display: none !important;
+  }
+  
+  .visible-sm {
+    display: block !important;
+  }
+  
+  .text-center-sm {
+    text-align: center !important;
+  }
+  
+  .flex-column-sm {
+    flex-direction: column !important;
+  }
+  
+  .w-100-sm {
+    width: 100% !important;
+  }
+  
+  .w-auto-sm {
+    width: auto !important;
+  }
+}
+
+/* 中等屏幕 (md) - 768px 及以上 */
+@media (min-width: 768px) {
+  .hidden-md {
+    display: none !important;
+  }
+  
+  .visible-md {
+    display: block !important;
+  }
+  
+  .text-center-md {
+    text-align: center !important;
+  }
+  
+  .flex-row-md {
+    flex-direction: row !important;
+  }
+  
+  .w-100-md {
+    width: 100% !important;
+  }
+  
+  .w-auto-md {
+    width: auto !important;
+  }
+}
+
+/* 大屏幕 (lg) - 992px 及以上 */
+@media (min-width: 992px) {
+  .hidden-lg {
+    display: none !important;
+  }
+  
+  .visible-lg {
+    display: block !important;
+  }
+  
+  .text-left-lg {
+    text-align: left !important;
+  }
+  
+  .text-center-lg {
+    text-align: center !important;
+  }
+  
+  .flex-row-lg {
+    flex-direction: row !important;
+  }
+}
+
+/* 超大屏幕 (xl) - 1200px 及以上 */
+@media (min-width: 1200px) {
+  .hidden-xl {
+    display: none !important;
+  }
+  
+  .visible-xl {
+    display: block !important;
+  }
+}
+
+/* 超超大屏幕 (xxl) - 1400px 及以上 */
+@media (min-width: 1400px) {
+  .hidden-xxl {
+    display: none !important;
+  }
+  
+  .visible-xxl {
+    display: block !important;
+  }
+}
+
+/* 响应式间距工具类 */
+@media (max-width: 575.98px) {
+  .m-xs-0 { margin: 0 !important; }
+  .m-xs-1 { margin: 0.25rem !important; }
+  .m-xs-2 { margin: 0.5rem !important; }
+  .m-xs-3 { margin: 1rem !important; }
+  .m-xs-4 { margin: 1.5rem !important; }
+  .m-xs-5 { margin: 3rem !important; }
+  
+  .p-xs-0 { padding: 0 !important; }
+  .p-xs-1 { padding: 0.25rem !important; }
+  .p-xs-2 { padding: 0.5rem !important; }
+  .p-xs-3 { padding: 1rem !important; }
+  .p-xs-4 { padding: 1.5rem !important; }
+  .p-xs-5 { padding: 3rem !important; }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .m-sm-0 { margin: 0 !important; }
+  .m-sm-1 { margin: 0.25rem !important; }
+  .m-sm-2 { margin: 0.5rem !important; }
+  .m-sm-3 { margin: 1rem !important; }
+  .m-sm-4 { margin: 1.5rem !important; }
+  .m-sm-5 { margin: 3rem !important; }
+  
+  .p-sm-0 { padding: 0 !important; }
+  .p-sm-1 { padding: 0.25rem !important; }
+  .p-sm-2 { padding: 0.5rem !important; }
+  .p-sm-3 { padding: 1rem !important; }
+  .p-sm-4 { padding: 1.5rem !important; }
+  .p-sm-5 { padding: 3rem !important; }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .m-md-0 { margin: 0 !important; }
+  .m-md-1 { margin: 0.25rem !important; }
+  .m-md-2 { margin: 0.5rem !important; }
+  .m-md-3 { margin: 1rem !important; }
+  .m-md-4 { margin: 1.5rem !important; }
+  .m-md-5 { margin: 3rem !important; }
+  
+  .p-md-0 { padding: 0 !important; }
+  .p-md-1 { padding: 0.25rem !important; }
+  .p-md-2 { padding: 0.5rem !important; }
+  .p-md-3 { padding: 1rem !important; }
+  .p-md-4 { padding: 1.5rem !important; }
+  .p-md-5 { padding: 3rem !important; }
+}
+
+@media (min-width: 992px) {
+  .m-lg-0 { margin: 0 !important; }
+  .m-lg-1 { margin: 0.25rem !important; }
+  .m-lg-2 { margin: 0.5rem !important; }
+  .m-lg-3 { margin: 1rem !important; }
+  .m-lg-4 { margin: 1.5rem !important; }
+  .m-lg-5 { margin: 3rem !important; }
+  
+  .p-lg-0 { padding: 0 !important; }
+  .p-lg-1 { padding: 0.25rem !important; }
+  .p-lg-2 { padding: 0.5rem !important; }
+  .p-lg-3 { padding: 1rem !important; }
+  .p-lg-4 { padding: 1.5rem !important; }
+  .p-lg-5 { padding: 3rem !important; }
+}
+
+/* 响应式文本对齐 */
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+/* 响应式浮动 */
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+/* 响应式清除浮动 */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 响应式容器 */
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}

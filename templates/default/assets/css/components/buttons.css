@@ -1,0 +1,188 @@
+/* 通用按钮组件样式 */
+
+/* 主要按钮样式 */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-smooth);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-subtle);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    color: white;
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* 次要按钮样式 */
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 28px;
+    background: transparent;
+    color: var(--text-dark);
+    border: 1px solid var(--border-medium);
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.btn-secondary:hover {
+    background: var(--bg-secondary);
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+/* 块级按钮样式 */
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Banner增强型占位区域按钮样式 */
+.hero-placeholder-buttons.enhanced .btn-primary,
+.inner-banner-placeholder-buttons.enhanced .btn-primary {
+    background: white;
+    color: #5cdbd3;
+    padding: 14px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid white;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-placeholder-buttons.enhanced .btn-primary:hover,
+.inner-banner-placeholder-buttons.enhanced .btn-primary:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.hero-placeholder-buttons.enhanced .btn-primary::before,
+.inner-banner-placeholder-buttons.enhanced .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.hero-placeholder-buttons.enhanced .btn-primary:hover::before,
+.inner-banner-placeholder-buttons.enhanced .btn-primary:hover::before {
+    left: 100%;
+}
+
+/* 询价卡片按钮样式 */
+.inquiry-card .btn-primary {
+    padding: 12px 15px;
+    background: linear-gradient(135deg, #4a90e2, #f55a9b);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0;
+    white-space: nowrap;
+    flex: 6; /* Submit button takes 6 parts */
+    min-width: 0; /* Allow button to shrink properly */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inquiry-card .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.inquiry-card .btn-primary i {
+    margin-right: 8px;
+}
+
+/* 底部询价表单按钮样式 */
+.footer-inquiry-form .btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.footer-inquiry-form .btn-primary i {
+    margin-right: 5px;
+}
+
+/* 响应式调整 */
+@media (max-width: 992px) {
+    .hero-placeholder-buttons.enhanced .btn-primary,
+    .inner-banner-placeholder-buttons.enhanced .btn-primary {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .inquiry-card .btn-primary {
+        padding: 10px;
+        font-size: 14px;
+        width: 100%;
+        flex: none;
+    }
+    
+    .inquiry-card .btn-primary i {
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .inquiry-card .btn-primary {
+        padding: 8px;
+        font-size: 14px;
+        width: 100%;
+        flex: none;
+    }
+    
+    .inquiry-card .btn-primary i {
+        margin-right: 5px;
+    }
+    
+    .footer-inquiry-form .btn-primary {
+        padding: 12px 20px;
+        border-radius: 30px;
+        font-size: 14px;
+    }
+    
+    .footer-inquiry-form .btn-primary i {
+        margin-right: 5px;
+    }
+}

@@ -1,0 +1,27 @@
+/* 主样式文件 - 导入所有CSS */
+
+/* 基础样式 */
+@import url('./base/reset.css');
+@import url('./base/variables.css');
+@import url('./base/typography-optimized.css');
+
+/* 组件样式 */
+@import url('./components/components-optimized.css');
+
+/* 布局样式 */
+@import url('./layout/grid.css');
+@import url('./layout/header.css');
+@import url('./layout/footer.css');
+@import url('./layout/responsive.css');
+
+/* 工具样式 */
+@import url('./utils/helpers.css');
+@import url('./utils/animations.css');
+@import url('./utils/responsive-helpers.css');
+@import url('./utils/colors-optimized.css');
+
+/* 页面样式 */
+@import url('./pages/frontend/home.css');
+
+/* 响应式样式 */
+@import url('./responsive.css');

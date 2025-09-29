@@ -1,0 +1,254 @@
+/* Banner精确样式修复文件 - 完全匹配原网站备份样式 */
+
+/* 首页Banner区域样式 - 精确匹配原网站备份 */
+.hero-section {
+    padding: 0;
+    background: linear-gradient(135deg, #e6f7ff, #fff0f6);
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    margin-top: 0 !important;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    animation: rotate 20s linear infinite;
+}
+
+/* 首页Banner占位区域样式 - 精确匹配原网站备份 */
+.hero-section.hero-placeholder {
+    background: linear-gradient(135deg, #e6f7ff, #fff0f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section.hero-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #5cdbd3, #ffadd2);
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+/* 首页增强型Banner占位区域样式 - 精确匹配原网站备份 */
+.hero-section.hero-placeholder.enhanced {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #5cdbd3, #ffadd2, #ffd666, #5cdbd3);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 确保首页增强型占位区域与内页一致 */
+.hero-section.hero-placeholder.enhanced::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    animation: rotate 20s linear infinite;
+    z-index: 1;
+}
+
+.hero-section.hero-placeholder.enhanced::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="rgba(255,255,255,0.1)"></path><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="rgba(255,255,255,0.2)"></path></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: wave 12s linear infinite;
+    z-index: 1;
+}
+
+/* Banner内容样式 - 精确匹配原网站备份 */
+.hero-placeholder-content.enhanced,
+.inner-banner-placeholder-content.enhanced {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Banner标题样式 - 精确匹配原网站备份 */
+.hero-placeholder-content.enhanced h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: white;
+    line-height: 1.2;
+    position: relative;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Banner标题下划线 - 精确匹配原网站备份 */
+.hero-placeholder-content.enhanced h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Banner段落样式 - 精确匹配原网站备份 */
+.hero-placeholder-content.enhanced p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Banner按钮容器 - 精确匹配原网站备份 */
+.hero-placeholder-buttons.enhanced {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Banner按钮样式 - 精确匹配原网站备份 */
+.hero-placeholder-buttons.enhanced .btn-primary {
+    background: white;
+    color: #5cdbd3;
+    padding: 14px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid white;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-placeholder-buttons.enhanced .btn-primary:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.hero-placeholder-buttons.enhanced .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.hero-placeholder-buttons.enhanced .btn-primary:hover::before {
+    left: 100%;
+}
+
+/* 添加动画效果 */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 992px) {
+    .hero-section,
+    .hero-section.hero-placeholder.enhanced {
+        height: 400px;
+    }
+    
+    .hero-placeholder-content.enhanced h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section,
+    .hero-section.hero-placeholder.enhanced {
+        height: 300px;
+    }
+    
+    .hero-placeholder-content.enhanced h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-placeholder-content.enhanced p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section,
+    .hero-section.hero-placeholder.enhanced {
+        height: 250px;
+    }
+    
+    .hero-placeholder-content.enhanced h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-placeholder-buttons.enhanced .btn-primary {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}

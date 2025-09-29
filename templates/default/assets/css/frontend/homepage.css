@@ -1,0 +1,18 @@
+/* 首页专用样式 */
+
+/* 为首页添加顶部内边距以补偿固定头部高度 */
+.home-page {
+    padding-top: 56px; /* 匹配头部高度: padding(20px*2) + nav link padding(8px*2) = 56px */
+}
+
+/* 确保英雄区域与导航底部对齐 */
+.hero-section {
+    margin-top: 0 !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .home-page {
+        padding-top: 56px; /* 移动端保持相同的高度 */
+    }
+}

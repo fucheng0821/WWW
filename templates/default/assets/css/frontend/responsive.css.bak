@@ -1,0 +1,208 @@
+/* 响应式设计优化 */
+/* 为全站添加统一的响应式媒体查询 */
+
+/* 平板设备 */
+@media screen and (max-width: 992px) {
+    .contact-info-section .layui-col-md4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .contact-form-section .layui-col-md6 {
+        width: 100%;
+    }
+    
+    /* 修复页脚底部卡片错位问题 - 在平板设备上改为两行两列布局，缩小卡片宽度留出间距 */
+    .site-footer .layui-col-md3 {
+        width: 46%;
+        margin-bottom: 20px;
+        margin-right: 2%;
+        margin-left: 2%;
+        float: left;
+    }
+    
+    /* 清除浮动防止影响布局 */
+    .site-footer .layui-row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .breadcrumb-section {
+        height: auto;
+        padding: 10px 0;
+    }
+    
+    .inner-banner-section {
+        min-height: 350px;
+    }
+    
+    .combined-card {
+        width: 100%;
+        min-height: unset;
+        max-height: none;
+    }
+    
+    .combined-section {
+        flex-direction: column;
+    }
+    
+    /* 平板设备上隐藏移动端菜单按钮 */
+    .mobile-menu-toggle {
+        display: none;
+    }
+}
+
+/* 移动设备 */
+@media screen and (max-width: 768px) {
+    .contact-info-section .layui-col-md4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .contact-form-section .layui-col-md6 {
+        width: 100%;
+    }
+    
+    /* 移动端页脚卡片改为单列布局 */
+    .site-footer .layui-col-md3 {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        float: none;
+    }
+    
+    .breadcrumb-section {
+        height: auto;
+        padding: 10px 0;
+    }
+    
+    .inner-banner-section {
+        min-height: 300px;
+    }
+    
+    .contact-form-wrapper {
+        padding: 30px 20px;
+    }
+    
+    .captcha-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .captcha-image {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .combined-card {
+        width: 100%;
+        min-height: unset;
+        max-height: none;
+    }
+    
+    .combined-section {
+        flex-direction: column;
+    }
+    
+    /* 移动设备上显示移动端菜单按钮 */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    /* 移动设备上隐藏主导航 */
+    .main-nav {
+        display: none;
+    }
+    
+    /* 移动端导航优化 */
+    .mobile-nav {
+        width: 90%;
+        max-width: none;
+    }
+    
+    .mobile-nav-item > a {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+    
+    .mobile-sub-nav a {
+        padding: 10px 15px 10px 30px;
+        font-size: 13px;
+    }
+}
+
+/* 小屏幕设备 */
+@media screen and (max-width: 576px) {
+    .contact-info-section .layui-col-md4 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .contact-form-section .layui-col-md6 {
+        width: 100%;
+    }
+    
+    .breadcrumb-section {
+        height: auto;
+        padding: 8px 0;
+    }
+    
+    .inner-banner-section {
+        min-height: 250px;
+    }
+    
+    .contact-form-wrapper {
+        padding: 20px 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .captcha-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .captcha-image {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    /* 小屏幕设备上进一步优化移动端导航 */
+    .mobile-nav {
+        width: 100%;
+    }
+    
+    .mobile-nav-header {
+        padding: 15px;
+    }
+    
+    .mobile-nav-header .logo {
+        font-size: 18px;
+    }
+    
+    .mobile-nav-list {
+        padding: 0;
+    }
+    
+    .mobile-nav-item > a {
+        padding: 15px;
+        font-size: 16px;
+    }
+    
+    .mobile-sub-nav a {
+        padding: 12px 15px 12px 30px;
+        font-size: 14px;
+    }
+    
+    .mobile-nav-footer {
+        padding: 15px;
+    }
+    
+    .btn-inquiry-mobile {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

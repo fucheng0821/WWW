@@ -1,0 +1,285 @@
+/* 优化的排版样式 */
+
+/* 字体系统 */
+:root {
+  --font-family-base: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  --font-family-heading: var(--font-family-base);
+  --font-family-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+/* 基础排版 */
+html {
+  font-size: 16px; /* 基准字体大小 */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+  color: var(--color-text-dark);
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+/* 响应式标题大小 */
+h1 {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-extrabold);
+}
+
+h2 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+}
+
+h3 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+h4 {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-semibold);
+}
+
+h5 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+}
+
+h6 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+/* 段落样式 */
+p {
+  color: var(--color-text-light);
+  line-height: var(--line-height-relaxed);
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+/* 链接样式 */
+a {
+  color: var(--color-accent-blue);
+  text-decoration: none;
+  transition: color 0.3s var(--ease-smooth);
+}
+
+a:hover {
+  color: var(--color-accent-pink);
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+/* 列表样式 */
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* 引用样式 */
+blockquote {
+  margin: 0 0 1em;
+  padding: 0 1em;
+  border-left: 4px solid var(--color-border-medium);
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+blockquote p {
+  margin-bottom: 0.5em;
+}
+
+blockquote cite {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+
+/* 代码样式 */
+code {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  padding: 0.2em 0.4em;
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-xs);
+  color: var(--color-accent-blue);
+}
+
+pre {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  padding: 1em;
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  line-height: var(--line-height-normal);
+  margin: 0 0 1em;
+}
+
+pre code {
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+}
+
+/* 强调文本 */
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+em {
+  font-style: italic;
+}
+
+/* 删除线文本 */
+del {
+  text-decoration: line-through;
+}
+
+/* 下划线文本 */
+ins {
+  text-decoration: underline;
+}
+
+/* 上标和下标 */
+sup,
+sub {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* 缩略语 */
+abbr[title] {
+  border-bottom: 1px dotted var(--color-border-medium);
+  cursor: help;
+  text-decoration: none;
+}
+
+/* 小号文本 */
+small {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+/* 标记文本 */
+mark {
+  background-color: var(--color-primary-yellow);
+  color: var(--color-text-dark);
+  padding: 0.2em;
+}
+
+/* 水平线 */
+hr {
+  border: 0;
+  border-top: 1px solid var(--color-border-medium);
+  margin: 1.5em 0;
+}
+
+/* 响应式排版调整 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--font-size-4xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  h3 {
+    font-size: var(--font-size-xxl);
+  }
+  
+  h4 {
+    font-size: var(--font-size-xl);
+  }
+  
+  h5 {
+    font-size: var(--font-size-lg);
+  }
+  
+  h6 {
+    font-size: var(--font-size-md);
+  }
+  
+  body {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-xxl);
+  }
+  
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+  
+  h4 {
+    font-size: var(--font-size-lg);
+  }
+  
+  h5 {
+    font-size: var(--font-size-md);
+  }
+  
+  h6 {
+    font-size: var(--font-size-sm);
+  }
+}

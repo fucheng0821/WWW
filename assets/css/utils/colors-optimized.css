@@ -1,0 +1,389 @@
+/* 优化的颜色和背景样式 */
+
+/* ==================== 背景颜色类 ==================== */
+.bg-primary {
+  background-color: var(--color-bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-bg-secondary);
+}
+
+.bg-tertiary {
+  background-color: var(--color-bg-tertiary);
+}
+
+.bg-section {
+  background-color: var(--color-bg-section);
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-current {
+  background-color: currentColor;
+}
+
+/* 渐变背景 */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-accent {
+  background: var(--gradient-accent);
+}
+
+.bg-gradient-footer {
+  background: var(--gradient-footer);
+}
+
+.bg-gradient-header {
+  background: var(--gradient-header);
+}
+
+/* ==================== 文本颜色类 ==================== */
+.text-dark {
+  color: var(--color-text-dark);
+}
+
+.text-light {
+  color: var(--color-text-light);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-white {
+  color: var(--color-text-white);
+}
+
+.text-current {
+  color: currentColor;
+}
+
+/* 强调色文本 */
+.text-accent-blue {
+  color: var(--color-accent-blue);
+}
+
+.text-accent-pink {
+  color: var(--color-accent-pink);
+}
+
+.text-accent-yellow {
+  color: var(--color-accent-yellow);
+}
+
+/* 品牌色文本 */
+.text-brand-orange {
+  color: var(--color-brand-orange);
+}
+
+.text-brand-blue {
+  color: var(--color-brand-blue);
+}
+
+.text-brand-green {
+  color: var(--color-brand-green);
+}
+
+.text-brand-red {
+  color: var(--color-brand-red);
+}
+
+/* ==================== 边框颜色类 ==================== */
+.border-light {
+  border-color: var(--color-border-light);
+}
+
+.border-medium {
+  border-color: var(--color-border-medium);
+}
+
+.border-dark {
+  border-color: var(--color-border-dark);
+}
+
+.border-transparent {
+  border-color: transparent;
+}
+
+.border-current {
+  border-color: currentColor;
+}
+
+/* ==================== 背景透明度类 ==================== */
+.bg-opacity-0 {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.bg-opacity-10 {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bg-opacity-20 {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bg-opacity-25 {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.bg-opacity-30 {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.bg-opacity-40 {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.bg-opacity-50 {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bg-opacity-60 {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.bg-opacity-70 {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.bg-opacity-75 {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.bg-opacity-80 {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.bg-opacity-90 {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.bg-opacity-100 {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* ==================== 文本透明度类 ==================== */
+.text-opacity-0 {
+  color: rgba(38, 38, 38, 0);
+}
+
+.text-opacity-10 {
+  color: rgba(38, 38, 38, 0.1);
+}
+
+.text-opacity-20 {
+  color: rgba(38, 38, 38, 0.2);
+}
+
+.text-opacity-25 {
+  color: rgba(38, 38, 38, 0.25);
+}
+
+.text-opacity-30 {
+  color: rgba(38, 38, 38, 0.3);
+}
+
+.text-opacity-40 {
+  color: rgba(38, 38, 38, 0.4);
+}
+
+.text-opacity-50 {
+  color: rgba(38, 38, 38, 0.5);
+}
+
+.text-opacity-60 {
+  color: rgba(38, 38, 38, 0.6);
+}
+
+.text-opacity-70 {
+  color: rgba(38, 38, 38, 0.7);
+}
+
+.text-opacity-75 {
+  color: rgba(38, 38, 38, 0.75);
+}
+
+.text-opacity-80 {
+  color: rgba(38, 38, 38, 0.8);
+}
+
+.text-opacity-90 {
+  color: rgba(38, 38, 38, 0.9);
+}
+
+.text-opacity-100 {
+  color: rgba(38, 38, 38, 1);
+}
+
+/* ==================== 背景图像类 ==================== */
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-repeat {
+  background-repeat: repeat;
+}
+
+.bg-repeat-x {
+  background-repeat: repeat-x;
+}
+
+.bg-repeat-y {
+  background-repeat: repeat-y;
+}
+
+.bg-repeat-round {
+  background-repeat: round;
+}
+
+.bg-repeat-space {
+  background-repeat: space;
+}
+
+/* ==================== 混合模式类 ==================== */
+.bg-blend-multiply {
+  background-blend-mode: multiply;
+}
+
+.bg-blend-screen {
+  background-blend-mode: screen;
+}
+
+.bg-blend-overlay {
+  background-blend-mode: overlay;
+}
+
+.bg-blend-darken {
+  background-blend-mode: darken;
+}
+
+.bg-blend-lighten {
+  background-blend-mode: lighten;
+}
+
+.bg-blend-color-dodge {
+  background-blend-mode: color-dodge;
+}
+
+.bg-blend-color-burn {
+  background-blend-mode: color-burn;
+}
+
+.bg-blend-hard-light {
+  background-blend-mode: hard-light;
+}
+
+.bg-blend-soft-light {
+  background-blend-mode: soft-light;
+}
+
+.bg-blend-difference {
+  background-blend-mode: difference;
+}
+
+.bg-blend-exclusion {
+  background-blend-mode: exclusion;
+}
+
+.bg-blend-hue {
+  background-blend-mode: hue;
+}
+
+.bg-blend-saturation {
+  background-blend-mode: saturation;
+}
+
+.bg-blend-color {
+  background-blend-mode: color;
+}
+
+.bg-blend-luminosity {
+  background-blend-mode: luminosity;
+}
+
+/* ==================== 附件类 ==================== */
+.bg-fixed {
+  background-attachment: fixed;
+}
+
+.bg-local {
+  background-attachment: local;
+}
+
+.bg-scroll {
+  background-attachment: scroll;
+}
+
+/* ==================== 响应式颜色类 ==================== */
+@media (max-width: 576px) {
+  .bg-primary-xs {
+    background-color: var(--color-bg-primary);
+  }
+  
+  .text-dark-xs {
+    color: var(--color-text-dark);
+  }
+  
+  .border-light-xs {
+    border-color: var(--color-border-light);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .bg-primary-sm {
+    background-color: var(--color-bg-primary);
+  }
+  
+  .text-dark-sm {
+    color: var(--color-text-dark);
+  }
+  
+  .border-light-sm {
+    border-color: var(--color-border-light);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .bg-primary-md {
+    background-color: var(--color-bg-primary);
+  }
+  
+  .text-dark-md {
+    color: var(--color-text-dark);
+  }
+  
+  .border-light-md {
+    border-color: var(--color-border-light);
+  }
+}
+
+@media (min-width: 992px) {
+  .bg-primary-lg {
+    background-color: var(--color-bg-primary);
+  }
+  
+  .text-dark-lg {
+    color: var(--color-text-dark);
+  }
+  
+  .border-light-lg {
+    border-color: var(--color-border-light);
+  }
+}

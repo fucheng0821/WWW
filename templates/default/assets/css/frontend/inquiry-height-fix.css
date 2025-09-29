@@ -1,0 +1,90 @@
+/* 首页询价卡片高度调整 */
+
+.inquiry-card {
+    /* 移除固定高度，让内容自然展开 */
+    height: auto;
+    min-height: auto;
+}
+
+/* 确保表单元素正确对齐 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    flex: 1;
+}
+
+/* 验证码组布局调整 */
+.captcha-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.captcha-group input {
+    flex: 2;
+    min-width: 0;
+}
+
+.captcha-image {
+    flex: 2;
+    min-width: 0;
+}
+
+.btn-primary {
+    flex: 6;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 平板设备调整 */
+@media (max-width: 992px) {
+    .captcha-group {
+        flex-direction: row;
+    }
+    
+    .captcha-group input,
+    .captcha-image,
+    .btn-primary {
+        flex: 1;
+    }
+}
+
+/* 移动设备调整 */
+@media (max-width: 768px) {
+    .captcha-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .captcha-image {
+        width: 100%;
+        flex: none;
+    }
+    
+    .btn-primary {
+        width: 100%;
+        flex: none;
+    }
+}
+
+/* 小屏幕设备调整 */
+@media (max-width: 480px) {
+    .captcha-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .captcha-group input,
+    .captcha-image,
+    .btn-primary {
+        flex: none;
+    }
+}

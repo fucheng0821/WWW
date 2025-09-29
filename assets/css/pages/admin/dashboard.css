@@ -1,0 +1,39 @@
+/* 控制台样式 */
+
+/* 今日数据样式 */
+.today-stats {
+    padding: 10px 0;
+}
+
+.today-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.today-item:last-child {
+    border-bottom: none;
+}
+
+.today-label {
+    color: var(--text-light);
+}
+
+.today-value {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 18px;
+}
+
+/* 快速操作样式 */
+.quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.quick-actions .layui-btn {
+    margin: 0;
+}

@@ -1,0 +1,350 @@
+/* 统一响应式设计样式 */
+
+/* 响应式断点变量 */
+:root {
+  --screen-xs: 0;
+  --screen-sm: 576px;
+  --screen-md: 768px;
+  --screen-lg: 992px;
+  --screen-xl: 1200px;
+  --screen-xxl: 1400px;
+}
+
+/* 平板设备 (768px - 992px) */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* 联系我们页面响应式调整 */
+  .contact-info-section .layui-col-md4 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form-section .layui-col-md6 {
+    width: 100%;
+  }
+  
+  /* 页脚响应式调整 */
+  .site-footer .layui-col-md3 {
+    width: 46%;
+    margin-bottom: 20px;
+    margin-right: 2%;
+    margin-left: 2%;
+    float: left;
+  }
+  
+  /* 清除浮动 */
+  .site-footer .layui-row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .breadcrumb-section {
+    height: auto;
+    padding: 10px 0;
+  }
+  
+  .inner-banner-section {
+    min-height: 350px;
+  }
+  
+  .combined-card {
+    width: 100%;
+    min-height: unset;
+    max-height: none;
+  }
+  
+  .combined-section {
+    flex-direction: column;
+  }
+  
+  /* 平板设备上隐藏移动端菜单按钮 */
+  .mobile-menu-toggle {
+    display: none;
+  }
+  
+  /* Banner响应式调整 */
+  .hero-section {
+    height: 400px;
+  }
+  
+  .inner-banner-section {
+    height: 350px;
+  }
+  
+  .hero-content-3d h1 {
+    font-size: 2.5rem;
+  }
+  
+  .inner-banner-content-3d h2 {
+    font-size: 2rem;
+  }
+}
+
+/* 移动设备 (576px - 768px) */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  /* 联系我们页面响应式调整 */
+  .contact-info-section .layui-col-md4 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form-section .layui-col-md6 {
+    width: 100%;
+  }
+  
+  /* 移动端页脚卡片改为单列布局 */
+  .site-footer .layui-col-md3 {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    float: none;
+  }
+  
+  .breadcrumb-section {
+    height: auto;
+    padding: 10px 0;
+  }
+  
+  .inner-banner-section {
+    min-height: 300px;
+  }
+  
+  .contact-form-wrapper {
+    padding: 30px 20px;
+  }
+  
+  .captcha-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .captcha-image {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .combined-card {
+    width: 100%;
+    min-height: unset;
+    max-height: none;
+  }
+  
+  .combined-section {
+    flex-direction: column;
+  }
+  
+  /* 移动设备上显示移动端菜单按钮 */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  /* 移动设备上隐藏主导航 */
+  .main-nav {
+    display: none;
+  }
+  
+  /* 移动端导航优化 */
+  .mobile-nav {
+    width: 90%;
+    max-width: none;
+  }
+  
+  .mobile-nav-item > a {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+  
+  .mobile-sub-nav a {
+    padding: 10px 15px 10px 30px;
+    font-size: 13px;
+  }
+  
+  /* Banner响应式调整 */
+  .hero-section {
+    height: 300px;
+  }
+  
+  .inner-banner-section {
+    height: 300px;
+  }
+  
+  .hero-content-3d h1 {
+    font-size: 2rem;
+  }
+  
+  .inner-banner-content-3d h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content-3d p,
+  .inner-banner-content-3d p {
+    font-size: 1rem;
+  }
+  
+  .carousel-control-3d {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+/* 小屏幕设备 (0px - 576px) */
+@media screen and (max-width: 576px) {
+  /* 联系我们页面响应式调整 */
+  .contact-info-section .layui-col-md4 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .contact-form-section .layui-col-md6 {
+    width: 100%;
+  }
+  
+  .breadcrumb-section {
+    height: auto;
+    padding: 8px 0;
+  }
+  
+  .inner-banner-section {
+    min-height: 250px;
+  }
+  
+  .contact-form-wrapper {
+    padding: 20px 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .captcha-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .captcha-image {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* 小屏幕设备上进一步优化移动端导航 */
+  .mobile-nav {
+    width: 100%;
+  }
+  
+  .mobile-nav-header {
+    padding: 15px;
+  }
+  
+  .mobile-nav-header .logo {
+    font-size: 18px;
+  }
+  
+  .mobile-nav-list {
+    padding: 0;
+  }
+  
+  .mobile-nav-item > a {
+    padding: 15px;
+    font-size: 16px;
+  }
+  
+  .mobile-sub-nav a {
+    padding: 12px 15px 12px 30px;
+    font-size: 14px;
+  }
+  
+  .mobile-nav-footer {
+    padding: 15px;
+  }
+  
+  .btn-inquiry-mobile {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  /* Banner响应式调整 */
+  .hero-section {
+    height: 250px;
+  }
+  
+  .inner-banner-section {
+    height: 250px;
+  }
+  
+  .hero-content-3d h1 {
+    font-size: 1.75rem;
+  }
+  
+  .inner-banner-content-3d h2 {
+    font-size: 1.5rem;
+  }
+  
+  .carousel-control-3d {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .carousel-control-3d.prev {
+    left: 10px;
+  }
+  
+  .carousel-control-3d.next {
+    right: 10px;
+  }
+}
+
+/* 超小屏幕设备特殊优化 */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .hero-content-3d h1,
+  .inner-banner-content-3d h2 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-content-3d p,
+  .inner-banner-content-3d p {
+    font-size: 0.9rem;
+  }
+  
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* 大屏幕设备优化 */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  /* 服务板块在大屏幕上的优化 */
+  .services-row {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .service-card {
+    max-width: 280px;
+  }
+}
+
+/* 超大屏幕设备优化 */
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+  
+  /* 在超大屏幕上进一步优化布局 */
+  .hero-content-3d h1 {
+    font-size: 4rem;
+  }
+  
+  .inner-banner-content-3d h2 {
+    font-size: 3rem;
+  }
+}

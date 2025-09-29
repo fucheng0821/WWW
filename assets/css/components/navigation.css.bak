@@ -1,0 +1,36 @@
+/* 导航样式 */
+.nav {
+    background: transparent;
+}
+
+.nav .nav-item a {
+    color: var(--text-primary);
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.nav .nav-item a:hover {
+    color: var(--accent-blue);
+}
+
+/* 侧边栏样式 */
+.nav-tree .nav-item a {
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 0;
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.nav-tree .nav-item a:hover,
+.nav-tree .this > a {
+    background: var(--brand-orange) !important;
+    color: white !important;
+}
+
+.nav-tree .nav-child a {
+    padding-left: 40px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-tree .nav-child a:hover {
+    background: rgba(255, 107, 53, 0.8) !important;
+    color: white !important;
+}

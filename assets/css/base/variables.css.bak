@@ -1,0 +1,78 @@
+/* CSS Variables */
+:root {
+    /* 科技感主色调 */
+    --primary-blue: #e6f7ff;
+    --primary-pink: #fff0f6;
+    --primary-yellow: #fffbe6;
+    
+    /* 淡色调主色 */
+    --accent-blue: #5cdbd3;
+    --accent-pink: #ffadd2;
+    --accent-yellow: #ffd666;
+    
+    /* 文字颜色 */
+    --text-dark: #262626;
+    --text-light: #8c8c8c;
+    --text-muted: #bfbfbf;
+    
+    /* 背景色 */
+    --bg-primary: #ffffff;
+    --bg-secondary: #fafafa;
+    --bg-tertiary: #f5f5f5;
+    
+    /* 边框和阴影 */
+    --border-light: #f0f0f0;
+    --border-medium: #d9d9d9;
+    --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-medium: 0 6px 16px rgba(0, 0, 0, 0.08);
+    --shadow-strong: 0 12px 32px rgba(0, 0, 0, 0.12);
+    
+    /* 动画缓动 */
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-spring: cubic-bezier(0.68, 0, 0.2, 1);
+    
+    /* 渐变背景 */
+    --gradient-primary: linear-gradient(135deg, var(--primary-blue), var(--primary-pink));
+    --gradient-accent: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+    --gradient-footer: linear-gradient(90deg, var(--accent-blue), var(--accent-pink), var(--accent-yellow), var(--accent-blue));
+    
+    /* 按钮样式 */
+    --btn-primary-bg: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+    --btn-primary-color: white;
+    --btn-secondary-bg: var(--bg-secondary);
+    --btn-secondary-color: var(--text-dark);
+    
+    /* 表单元素 */
+    --input-border: var(--border-medium);
+    --input-focus-border: var(--accent-blue);
+    --input-focus-shadow: 0 0 0 3px rgba(92, 219, 211, 0.2);
+    
+    /* 间距 */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 50px;
+    
+    /* 圆角 */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 30px;
+    
+    /* 字体大小 */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 20px;
+    --font-size-xxl: 24px;
+    
+    /* 字体权重 */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+}

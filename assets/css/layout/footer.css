@@ -1,0 +1,120 @@
+/* 底部样式 */
+.footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-light);
+    padding: 60px 0 30px;
+}
+
+/* 高特异性的底部背景样式，解决CSS重叠问题 */
+.footer {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.25), rgba(245, 90, 155, 0.25)) !important;
+}
+
+.footer-content {
+    margin-bottom: 40px;
+}
+
+.footer-section {
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: var(--shadow-subtle);
+    height: 100%;
+    transition: all 0.3s var(--ease-smooth);
+    border: 2px solid transparent;
+}
+
+.footer-section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--accent-blue);
+}
+
+.footer-section h3 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-pink));
+    border-radius: 3px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: all 0.3s var(--ease-smooth);
+    display: inline-block;
+    position: relative;
+    padding-left: 15px;
+}
+
+.footer-links a:hover {
+    color: var(--accent-blue);
+    transform: translateX(5px);
+}
+
+.footer-links a::before {
+    content: '\f054';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: var(--accent-blue);
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.footer-links a:hover::before {
+    transform: translateY(-50%) translateX(3px);
+}
+
+.footer-contact p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-contact p i {
+    color: var(--accent-blue);
+    margin-right: 10px;
+    margin-top: 4px;
+    min-width: 20px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-tertiary);
+}

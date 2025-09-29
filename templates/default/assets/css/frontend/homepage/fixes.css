@@ -1,0 +1,492 @@
+/* 首页样式修复 - 针对用户提出的四个问题 */
+
+/* 首页服务板块背景色 - 设置为蓝粉渐变并减淡到25% */
+.services-section, 
+body .services-section, 
+#main .services-section {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.25), rgba(245, 90, 155, 0.25)) !important; /* Blue-pink gradient #4a90e2 to #f55a9b with 25% opacity */
+}
+
+/* 其他板块背景色保持不变 */
+.portfolio-section,
+.combined-section,
+.inquiry-section {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.25), rgba(245, 90, 155, 0.25)) !important;
+}
+
+/* 问题2: 新闻资讯板块、动态了解我们板块背景颜色改为和合作伙伴板块背景颜色一样 */
+.news-section {
+    background: var(--bg-secondary) !important;
+}
+
+/* 问题3: 底部（footer）背景颜色改为和联系方式板块的背景颜色一样 */
+.site-footer {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-pink)) !important;
+    border-top: none !important;
+}
+
+/* 问题1: 新闻板块要展示3个卡片 */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 0;
+}
+
+/* 确保新闻板块响应式布局正确 */
+@media (max-width: 992px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 问题2: 客户见证和立即询价左边一个右边一个，现在重叠到一起了 */
+.combined-section {
+    padding: 100px 0;
+    background: var(--bg-secondary);
+    position: relative;
+    overflow: visible; /* Changed from hidden to visible to prevent cutting off content */
+    box-sizing: border-box; /* Ensure proper sizing */
+}
+
+.combined-wrapper {
+    display: flex !important;
+    gap: 30px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    align-items: stretch !important; /* Changed from flex-start to stretch */
+    flex-wrap: nowrap !important; /* Changed from wrap to nowrap */
+    overflow: visible !important; /* Ensure content is not cut off */
+}
+
+/* 确保左右两列都从顶部开始 */
+.testimonials-column,
+.inquiry-column {
+    flex: 1;
+    min-width: 300px;
+    align-self: stretch !important; /* Changed from flex-start to stretch */
+    margin-top: 0 !important;
+}
+
+/* 确保客户见证卡片和询价卡片大小一致 */
+.testimonial-card,
+.inquiry-card {
+    background: white !important;
+    border-radius: 15px !important;
+    padding: 30px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    height: 230px !important; /* Increased from 220px to 230px (10px more) */
+    min-height: 230px; /* 设置最小高度确保两卡片高度一致 */
+    overflow: hidden !important; /* Prevent content overflow */
+}
+
+/* 调整客户见证卡片位置 - 向下移动1px */
+.testimonial-card {
+    margin-top: 1px !important; /* Move the card down by 1px */
+}
+
+/* 调整询价卡片位置 - 向下移动30px */
+.inquiry-card {
+    margin-top: 30px !important; /* Move the card down by 30px */
+    backdrop-filter: none !important;
+    margin: 30px 0 0 0 !important; /* Move the card down by 30px */
+}
+
+/* 调整询价卡片内部样式以适应更小的高度 */
+.inquiry-card {
+    backdrop-filter: none !important;
+    margin: 30px 0 0 0 !important; /* Move the card down by 30px */
+}
+
+/* 调整询价卡片内部表单元素以适应更小的高度 */
+.inquiry-card .form-row {
+    margin-bottom: 10px !important;
+}
+
+.inquiry-card input,
+.inquiry-card select {
+    padding: 8px 10px !important;
+}
+
+.inquiry-card textarea {
+    padding: 8px 10px !important;
+    min-height: 60px !important;
+}
+
+.inquiry-card .captcha-group {
+    margin-bottom: 8px !important;
+}
+
+.inquiry-card .captcha-group input {
+    height: 35px !important;
+}
+
+.inquiry-card .captcha-image {
+    height: 35px !important;
+}
+
+.inquiry-card .btn-primary {
+    margin-top: 5px !important;
+    padding: 8px 16px !important;
+    height: 36px !important;
+}
+
+/* 确保两列具有相同的内部间距和对齐方式 */
+.testimonials-column .section-header,
+.inquiry-column .section-header {
+    margin-bottom: 30px;
+}
+
+/* 确保两列宽度完全相同 */
+.testimonials-column,
+.inquiry-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: calc(50% - 15px); /* 确保每列占据50%宽度减去间隙 */
+}
+
+/* 调整询价卡片内部表单元素的间距 */
+.inquiry-card .form-group {
+    margin-bottom: 0 !important;
+}
+
+.inquiry-card .form-row.third-row {
+    margin-bottom: 0 !important;
+}
+
+/* 调整客户见证指示器位置 - 向上移动25px */
+.testimonials-indicators {
+    margin-top: -25px !important; /* Move the indicators up by 25px */
+}
+
+/* 问题3: 合作伙伴6个卡片要在一行显示 */
+.partners-grid {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px 0;
+    gap: 15px;
+}
+
+.partner-item {
+    flex: 0 0 auto;
+    width: calc(16.666% - 12.5px);
+    min-width: 150px;
+    max-width: 200px;
+}
+
+/* 确保在移动设备上依然有良好的显示效果 */
+@media (max-width: 1200px) {
+    .partner-item {
+        width: calc(20% - 12px);
+    }
+}
+
+@media (max-width: 992px) {
+    .partner-item {
+        width: calc(33.333% - 10px);
+    }
+    
+    .testimonial-card,
+    .inquiry-card {
+        min-height: 230px !important; /* Increased from 220px to 230px (10px more) */
+    }
+}
+
+@media (max-width: 768px) {
+    .partner-item {
+        width: calc(50% - 7.5px);
+    }
+    
+    .testimonial-card,
+    .inquiry-card {
+        min-height: 230px !important; /* Increased from 220px to 230px (10px more) */
+    }
+}
+
+@media (max-width: 576px) {
+    .partner-item {
+        width: 100%;
+        max-width: none;
+    }
+    
+    /* 调整移动端询价卡片高度 */
+    .testimonial-card,
+    .inquiry-card {
+        min-height: 200px !important; /* Increased from 190px to 200px (10px more) */
+        padding: 20px !important;
+    }
+    
+    .inquiry-card input,
+    .inquiry-card select {
+        padding: 6px 8px !important;
+    }
+    
+    .inquiry-card textarea {
+        padding: 6px 8px !important;
+        min-height: 50px !important;
+    }
+    
+    .inquiry-card .captcha-image {
+        height: 30px !important;
+    }
+    
+    .inquiry-card .btn-primary {
+        padding: 6px 12px !important;
+        height: 32px !important;
+    }
+}
+
+/* 问题4: 底部样式修复 - 卡片式底部设计 */
+.site-footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-light);
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    margin-bottom: 40px;
+}
+
+.footer-section {
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: var(--shadow-subtle);
+    height: 100%;
+    transition: all 0.3s var(--ease-smooth);
+    border: 2px solid transparent;
+}
+
+.footer-section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--accent-blue);
+}
+
+.footer-section h3 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-pink));
+    border-radius: 3px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: all 0.3s var(--ease-smooth);
+    display: inline-block;
+    position: relative;
+    padding-left: 15px;
+}
+
+.footer-links a:hover {
+    color: var(--accent-blue);
+    transform: translateX(5px);
+}
+
+.footer-links a::before {
+    content: '\f054';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: var(--accent-blue);
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.footer-links a:hover::before {
+    transform: translateY(-50%) translateX(3px);
+}
+
+.footer-contact p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-contact p i {
+    color: var(--accent-blue);
+    margin-right: 10px;
+    margin-top: 4px;
+    min-width: 20px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-tertiary);
+    color: var(--text-dark);
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.footer-social a:hover {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+    color: white;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid var(--border-light);
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* 底部询价表单样式 */
+.footer-inquiry-form {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: var(--shadow-subtle);
+    margin-top: 20px;
+}
+
+.footer-inquiry-form .section-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-inquiry-form .section-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-inquiry-form .form-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-inquiry-form input,
+.footer-inquiry-form select {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--border-medium);
+    border-radius: 30px;
+    font-size: 14px;
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.footer-inquiry-form input:focus,
+.footer-inquiry-form select:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(92, 219, 211, 0.2);
+}
+
+.footer-inquiry-form .captcha-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer-inquiry-form .captcha-group input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--border-medium);
+    border-radius: 30px;
+    font-size: 14px;
+    transition: all 0.3s var(--ease-smooth);
+    text-transform: uppercase;
+}
+
+.footer-inquiry-form .captcha-group input:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(92, 219, 211, 0.2);
+}
+
+.footer-inquiry-form .captcha-image {
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid var(--border-medium);
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.footer-inquiry-form .captcha-image:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-subtle);
+}
+
+.footer-inquiry-form .btn-primary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.footer-inquiry-form .btn-primary i {
+    margin-right: 5px;
+}
+
+.footer-inquiry-form .privacy-notice {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 15px;
+    text-align: center;
+}
+
+.footer-inquiry-form .privacy-notice a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.footer-inquiry-form .privacy-notice a:hover {
+    text-decoration: underline;
+    color: var(--accent-pink);
+}

@@ -1,0 +1,168 @@
+/* News List Specific Styles */
+
+/* Ensure news cards display title on one line and description on two lines */
+.news-page .content-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-page .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-page .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    /* Ensure title stays on one line */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-page .card-title a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.3s var(--ease-smooth);
+    /* Ensure link takes full width */
+    display: block;
+    /* Add these for better cross-browser compatibility */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.news-page .card-title a:hover {
+    color: var(--accent-blue);
+}
+
+.news-page .card-summary {
+    color: var(--text-light);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+    /* Limit to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    /* Fallback for browsers that don't support line-clamp */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Add these for better cross-browser compatibility */
+    max-height: 3.2em; /* 2 lines * 1.6 line-height */
+}
+
+/* Add fallback for browsers that don't support -webkit-line-clamp */
+@supports not (-webkit-line-clamp: 2) {
+    .news-page .card-summary {
+        height: 3.2em;
+        overflow: hidden;
+    }
+}
+
+.news-page .card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    margin-top: auto;
+    /* Add padding to prevent content from touching edges */
+    padding-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .news-page .card-title {
+        font-size: 1.125rem;
+    }
+    
+    .news-page .card-summary {
+        font-size: 0.875rem;
+    }
+}
+
+/* Additional responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+    .news-page .card-title {
+        font-size: 1rem;
+    }
+    
+    .news-page .card-summary {
+        font-size: 0.8125rem;
+    }
+}
+
+/* Ensure our styles override any default styles with higher specificity */
+body.news-page .content-card .card-content .card-title,
+body.news-page .content-card .card-content .card-title a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body.news-page .content-card .card-content .card-summary {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+/* 面包屑导航增强 - 与联系页面样式一致 */
+.breadcrumb-section {
+    background: linear-gradient(-45deg, #5cdbd3, #ffadd2, #ffd666, #5cdbd3);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.custom-breadcrumb {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    padding: 0 25px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+.custom-breadcrumb a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.custom-breadcrumb a:hover {
+    color: #1890ff;
+}
+
+.custom-breadcrumb span {
+    color: #666;
+}
+
+/* 确保我们的样式具有更高的优先级 */
+body.news-page .content-card .card-content .card-title,
+body.news-page .content-card .card-content .card-title a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body.news-page .content-card .card-content .card-summary {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+/* 面包屑导航增强 - 与联系页面样式一致 */

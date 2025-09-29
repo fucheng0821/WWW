@@ -1,0 +1,44 @@
+/* 后端管理样式 */
+
+/* LayUI 布局覆盖 */
+.layui-layout-admin .layui-header {
+    background: var(--primary-white);
+    border-bottom: 1px solid var(--border-light);
+    box-shadow: var(--shadow-subtle);
+}
+
+.layui-layout-admin .layui-side {
+    background: var(--primary-dark);
+}
+
+.layui-layout-admin .layui-body {
+    background: var(--bg-section);
+    padding: 20px;
+}
+
+/* Header 样式优化 */
+.layui-logo {
+    background: var(--primary-dark) !important;
+    color: var(--primary-white) !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.layui-logo i {
+    color: var(--brand-orange);
+    margin-right: 8px;
+}
+
+/* 导航样式 */
+.layui-nav {
+    background: transparent;
+}
+
+.layui-nav .layui-nav-item a {
+    color: var(--text-primary);
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.layui-nav .layui-nav-item a:hover {
+    color: var(--brand-orange);
+}

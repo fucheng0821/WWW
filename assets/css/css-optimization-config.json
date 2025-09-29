@@ -1,0 +1,50 @@
+{
+  "optimization": {
+    "minify": true,
+    "concatenate": true,
+    "removeUnused": true,
+    "optimizeImages": true,
+    "criticalCSS": true,
+    "fontOptimization": true,
+    "gzipCompression": true
+  },
+  "files": {
+    "input": [
+      "./base/reset.css",
+      "./base/variables.css",
+      "./base/typography.css",
+      "./components/buttons.css",
+      "./components/cards.css",
+      "./components/forms.css",
+      "./components/navigation.css",
+      "./layout/grid.css",
+      "./layout/header.css",
+      "./layout/footer.css",
+      "./utils/helpers.css",
+      "./utils/animations.css"
+    ],
+    "output": "./optimized/main-optimized.css"
+  },
+  "critical": {
+    "dimensions": [
+      "1920x1080",
+      "1366x768",
+      "375x667"
+    ],
+    "selectors": [
+      ".site-header",
+      ".hero-section",
+      ".btn-primary",
+      ".card",
+      ".site-footer"
+    ]
+  },
+  "unused": {
+    "ignore": [
+      ".active",
+      ".show",
+      ".fade",
+      ".collapse"
+    ]
+  }
+}

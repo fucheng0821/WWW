@@ -1,0 +1,63 @@
+<!-- 自定义内容编辑器 -->
+                                                <div class="custom-editor">
+                                                    <!-- 第一行工具栏：文本样式相关功能 -->
+                                                    <div class="editor-toolbar" style="margin-bottom: 5px;">
+                                                        <!-- 字体选择 - 扩展为更多流行字体 -->
+                                                        <div class="layui-inline" style="margin-right: 10px;">
+                                                            <div class="layui-btn-group">
+                                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('fontName', 'Microsoft YaHei, 微软雅黑')" title="微软雅黑">雅黑</button>
+                                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('fontName', 'SimSun, 宋体')" title="宋体">宋体</button>
+                                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('fontName', 'SimHei, 黑体')" title="黑体">黑体</button>
+                                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('fontName', 'KaiTi, 楷体')" title="楷体">楷体</button>
+                                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('fontName', 'FangSong, 仿宋')" title="仿宋">仿宋</button>
+                                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('fontName', 'PingFang SC, 苹方')" title="苹方">苹方</button>
+                                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('fontName', 'Arial')" title="Arial">Arial</button>
+                                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('fontName', 'Helvetica')" title="Helvetica">Helvetica</button>
+                                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('fontName', 'Verdana')" title="Verdana">Verdana</button>
+                                                            </div>
+                                                        </div>
+                                                         
+                                                        <!-- 基础格式 -->
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('bold')" title="粗体"><i class="layui-icon layui-icon-fonts-strong"></i></button>
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('italic')" title="斜体"><i class="layui-icon layui-icon-fonts-i"></i></button>
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('underline')" title="下划线"><i class="layui-icon layui-icon-fonts-u"></i></button>
+                                                         
+                                                        <!-- 标题选择 - 改为按钮组 -->
+                                                        <div class="layui-inline" style="margin-left: 10px;">
+                                                            <div class="layui-btn-group">
+                                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('formatBlock', 'p')" title="段落">P</button>
+                                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('formatBlock', 'h1')" title="标题1">H1</button>
+                                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('formatBlock', 'h2')" title="标题2">H2</button>
+                                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('formatBlock', 'h3')" title="标题3">H3</button>
+                                                            </div>
+                                                        </div>
+                                                         
+                                                        <!-- 对齐方式 -->
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('alignLeft')" style="margin-left: 10px;" title="左对齐"><i class="layui-icon layui-icon-align-left"></i></button>
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('alignCenter')" style="margin-left: 0;" title="居中对齐"><i class="layui-icon layui-icon-align-center"></i></button>
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('alignRight')" style="margin-left: 0;" title="右对齐"><i class="layui-icon layui-icon-align-right"></i></button>
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('alignJustify')" style="margin-left: 0;" title="两端对齐"><i class="layui-icon layui-icon-align-justify"></i></button>
+                                                         
+                                                        <!-- 字体颜色 -->
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="showColorPicker('foreColor')" style="margin-left: 10px;" title="字体颜色"><i class="layui-icon layui-icon-fonts-color"></i></button>
+                                                         
+                                                        <!-- 背景颜色 -->
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="showColorPicker('hiliteColor')" style="margin-left: 5px;" title="背景颜色"><i class="layui-icon layui-icon-paintbrush"></i></button>
+                                                    </div>
+                                                     
+                                                    <!-- 第二行工具栏：插入功能相关 -->
+                                                    <div class="editor-toolbar">
+                                                        <!-- 插入功能 -->
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.insertLink()" title="插入链接"><i class="layui-icon layui-icon-link"></i></button>
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.insertImage()" style="margin-left: 5px;" title="插入图片"><i class="layui-icon layui-icon-picture"></i></button>
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.insertVideo()" style="margin-left: 5px;" title="插入视频"><i class="layui-icon layui-icon-video"></i></button>
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.findReplace()" style="margin-left: 10px;" title="查找替换"><i class="layui-icon layui-icon-search"></i></button>
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.insertTable()" style="margin-left: 5px;" title="插入表格"><i class="layui-icon layui-icon-table"></i></button>
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.insertMedia()" style="margin-left: 5px;" title="插入媒体"><i class="layui-icon layui-icon-share"></i></button>
+                                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" onclick="window.formatText('viewSource')" style="margin-left: 10px;" title="查看源码"><i class="layui-icon layui-icon-code"></i></button>
+                                                    </div>
+                                                    <div id="custom-editor" class="editor-content" contenteditable="true" style="min-height: 400px; border: 1px solid #e6e6e6; padding: 15px; background: #fff; font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; font-size: 14px; line-height: 1.6;">
+                                                        <?php echo $content ?: '<p>开始编写您的内容...</p>'; ?>
+                                                    </div>
+                                                </div>
+                                                <textarea name="content" id="content-input" style="display: none;"><?php echo htmlspecialchars($content); ?></textarea>
